@@ -17,7 +17,7 @@ const business = {
 };
 
 const businesses = [
-  business,
+  business, // you could think of these as 'someBiz'
   business,
   business,
   business,
@@ -26,11 +26,17 @@ const businesses = [
 ];
 
 class App extends React.Component {
+  searchYelp(term, location, sortBy){
+    console.log("Searching Yelp with " + term + location + sortBy +
+    " as the 3 parameters");
+  }
   render() {
     return (
       <div className="App">
         <h1>ravenous</h1>
-        <SearchBar />
+        <SearchBar searchYelp={this.searchYelp} />
+        {/* This is adding an attribute named 'businesses', and setting it equal
+        to the array named businesses. */}
         <BusinessList businesses={businesses} />
       </div>
     );

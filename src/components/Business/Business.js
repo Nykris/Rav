@@ -1,6 +1,9 @@
 import React from 'react';
 import './Business.css';
 
+/* This is a blank business template, ready to be loaded with information.
+It will get its info from this.props.business. */
+
 class Business extends React.Component {
   render() {
     return (
@@ -26,4 +29,5 @@ class Business extends React.Component {
   }
 }
 
+// --> Export to BusinessList!
 export default Business;
